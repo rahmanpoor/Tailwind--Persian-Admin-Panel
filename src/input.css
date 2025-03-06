@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+    font-family: Iransans;
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url("./fonts/Iransans.woff2") format("woff2");
+  }
+
+  @theme {
+    --font-iransans: "Iransans";
+  }
