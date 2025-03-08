@@ -3,13 +3,33 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
-    font-family: Iransans;
-    font-style: normal;
-    font-weight: 200 700;
-    font-display: swap;
-    src: url("./fonts/Iransans.woff2") format("woff2");
+  font-family: Iransans;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("./fonts/Iransans.woff2") format("woff2");
+}
+
+
+
+@theme {
+  --font-iransans: "Iransans";
+
+
+  --animate-wiggle: scale-up-hor-right 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  @keyframes wiggle {
+    0% {
+      -webkit-transform: scaleX(0.4);
+      transform: scaleX(0.4);
+-webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+-webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+    }
   }
 
-  @theme {
-    --font-iransans: "Iransans";
-  }
+}
